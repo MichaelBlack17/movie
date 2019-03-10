@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2019-03-10T15:14:23" hostname="DESKTOP-8NTSQLQ" time="0.706">
+<testsuite name="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2019-03-10T15:46:27" hostname="DESKTOP-8NTSQLQ" time="0.669">
   <properties/>
-  <testcase name="getTopMovies_TopLimit_ReturnsList" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.691"/>
-  <testcase name="deleteMovie_MovieExists_ReturnsOk" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.001"/>
-  <testcase name="getTopMovies_MoviesFound_ReturnsList" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.0"/>
-  <testcase name="patchMovie_MoviePatched_ReturnsOk" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.004"/>
-  <testcase name="getTopMovies_LimitZero_ReturnsBadRequest" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.004"/>
-  <testcase name="patchMovie_MovieNotFound_ReturnsResponse" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.001"/>
-  <testcase name="getTopMovies_OverLimit_ReturnsBadRequest" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.0"/>
-  <testcase name="deleteMovie_MovieNotFound_ReturnsResponse" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.001"/>
+  <testcase name="getTopMovies_TopLimit_ReturnsList" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.65"/>
+  <testcase name="deleteMovie_MovieExists_ReturnsOk" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.002"/>
+  <testcase name="getTopMovies_MoviesFound_ReturnsList" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.001"/>
+  <testcase name="patchMovie_MoviePatched_ReturnsOk" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.005"/>
+  <testcase name="getTopMovies_LimitZero_ReturnsBadRequest" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.005"/>
+  <testcase name="patchMovie_MovieNotFound_ReturnsResponse" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.0"/>
+  <testcase name="getTopMovies_OverLimit_ReturnsBadRequest" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.001"/>
+  <testcase name="deleteMovie_MovieNotFound_ReturnsResponse" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.0"/>
   <testcase name="createMovie_MovieCreated_ReturnsMovie" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.002"/>
   <testcase name="getTopMovies_NoMovies_ReturnsEmptyList" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.001"/>
   <testcase name="getTopMovies_LimitMinus_ReturnsBadRequest" classname="ru.bmstu.iu7.topmovies.backend.controller.MovieControllerTest" time="0.0"/>
