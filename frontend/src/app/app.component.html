@@ -1,0 +1,55 @@
+<div class="container">
+  <h1>Today's top movies</h1><br/><br/>
+  <div class="row">
+    <div class="col-md-3">
+      <div *ngIf="movies">
+        <ol>
+          <li *ngFor="let movie of movies; index as movieIndex" class="movie-list-item">
+            <a (click)="onMovieSelect(movieIndex)">{{movie.title}}</a>
+          </li>
+        </ol>
+      </div>
+      <p>
+        <button (click)="onUpdateBtnClick()" class="btn btn-secondary" type="button">Update list</button>
+      </p>
+    </div>
+    <div class="col-md-8">
+      <table *ngIf="selectedMovie" class="table">
+        <tbody>
+        <tr *ngIf="selectedMovie.title">
+          <td>Title</td>
+          <td>{{selectedMovie.title}}</td>
+        </tr>
+        <tr *ngIf="selectedMovie.rating != null">
+          <td>Rating</td>
+          <td>{{selectedMovie.rating}}</td>
+        </tr>
+        <tr *ngIf="selectedMovie.year">
+          <td>Year</td>
+          <td>{{selectedMovie.year}}</td>
+        </tr>
+        <tr *ngIf="selectedMovie.genre">
+          <td>Genre</td>
+          <td>{{selectedMovie.genre}}</td>
+        </tr>
+        <tr *ngIf="selectedMovie.director">
+          <td>Director</td>
+          <td>{{selectedMovie.director}}</td>
+        </tr>
+        <tr *ngIf="selectedMovie.actors">
+          <td>Actors</td>
+          <td>
+            <ul>
+              <li *ngFor="let actor of selectedMovie.actors">{{actor}}</li>
+            </ul>
+          </td>
+        </tr>
+        <tr *ngIf="selectedMovie.description">
+          <td>Description</td>
+          <td>{{selectedMovie.description}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+jobs:
+  include:
+    - stage: build and test backend
+      language: java
+      jdk:
+        - openjdk11
+      script:
+        - cd ./backend && ./gradlew build
+      after_script:
+        - ./gradlew clean
+
+    - stage: report coverage
+      language: java
+      jdk:
+        - openjdk11
+      script:
+        - cd ./backend && ./gradlew test jacocoTestReport
+      after_success:
+        - bash <(curl -s https://codecov.io/bash)
+      after_script:
+        - ./gradlew clean
+
+    - stage: build frontend
+      language: node_js
+      node_js:
+        - "11.10.0"
+      script:
+        - cd ./frontend && npm install
+        - npm run build
+
+    - stage: test frontend
+      language: node_js
+      node_js:
+        - "11.10.0"
+      addons:
+        apt:
+          sources:
+            - google-chrome
+          packages:
+            - google-chrome-stable
+      script:
+        - cd ./frontend && npm install
+        - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+        - npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
+
+    - stage: build images
+      services:
+        - docker
+      script:
+        - docker-compose build

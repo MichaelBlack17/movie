@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    restart: always
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    depends_on:
+      - database
+    environment:
+      - MOVIES_DB_HOST=database
+      - MOVIES_DB_PORT=27017
+
+  database:
+    image: "mongo:4.0.6"
