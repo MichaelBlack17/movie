@@ -2,7 +2,7 @@ package ru.bmstu.iu7.topmovies.backend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.junit4.SpringRunner;
+//import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.bind.annotation.*;
 import ru.bmstu.iu7.topmovies.backend.constant.Limit;
 import ru.bmstu.iu7.topmovies.backend.domain.Movie;
